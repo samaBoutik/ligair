@@ -1,0 +1,11 @@
+<h2>La Concentration en polluant 03
+</h2>
+<div class="listeatmo">
+	{% for id,intervalle in intervalles %}
+
+		<div class="ligneindice">
+			<h4>{{intervalle|upper}}</h4>
+			<div class="image" style="background-color:{{couleurs[id]}}"></div>
+		</div>
+	{% endfor %}
+</div>

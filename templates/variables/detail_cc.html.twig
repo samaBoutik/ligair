@@ -1,0 +1,57 @@
+<style>
+	h3 {
+		display: flex;
+		flex-direction: column;
+		gap: 3px
+	}
+	table {
+		width: 100%;
+	}
+	tr {
+		display: flex;
+		justify-content: space-between;
+	}
+	.iden {
+		font-size: clamp(11px, 1vw, 14px);
+		font-weight: lighter;
+		color: green;
+	}
+	.resultat {
+		font-size: clamp(12px, 3vw, 15px);
+		color: #4946c8;
+		text-align: end;
+	}
+</style>
+
+<table>
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>RESULTAT</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th class="iden">DEPARTEMENT</th>
+			<td class="resultat">{{commune.depName|upper}}</td>
+
+		</tr>
+		<tr>
+			<th class="iden">ARRONDISSEMENT</th>
+			<td class="resultat">{{commune.arrdepNam|upper}}</td>
+
+		</tr>
+		<tr>
+			<th class="iden">CODE COMMUNE</th>
+			<td class="resultat">{{commune.comCode|upper}}</td>
+
+		</tr>
+		<tr>
+			<th class="iden">VILLE</th>
+			<td class="resultat">{{commune.comName|upper}}</td>
+
+		</tr>
+
+	</tbody>
+
+</table>

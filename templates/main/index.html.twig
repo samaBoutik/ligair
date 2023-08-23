@@ -1,0 +1,70 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello MainController!
+{% endblock %}
+
+{% block body %}
+
+	<h1>
+		LIG'AIR EVALUATION
+	</h1>
+
+	<div class="map" id="map">
+
+		<div class="map__image">
+			{% include "/cartes_svg/carte.svg" %}
+		</div>
+
+		<div class="map__description">
+			<h2 class="bg-danger">Recapitulatif</h2>
+
+			<div id="variable"></div>
+
+			<form method="post" id="form">
+				<div class="choix_resultat">
+					<select name="choix_souhait" id="choix_souhait">
+						<option value="">Choisir la donnée à visualiser
+						</option>
+						<option value="val_ind">Indice ATMO</option>
+						<option value="conc_pm10">Conc PM10</option>
+						<option value="conc_pm25">Conc PM 2,5</option>
+						<option value="conc_no2">Conc NO2</option>
+						<option value="conc_so2">Conc SO2</option>
+						<option value="conc_o3">Conc O3</option>
+					</select>
+				</div>
+				<div class="lesdates">
+					<div class="daterun">
+						<label for="daterun">Date RUN</label>
+						<select name="daterun" id="daterun">
+							<option value="">choisir la date run</option>
+							{% for dat in daterun %}
+								<option value="{{dat.id}}">{{dat.dateRun|date("Y-m-d")}}</option>
+							{% endfor %}
+						</select>
+					</div>
+					<div class="dateech">
+						<label for="dateech">Date Echeance</label>
+						<select name="dateech" id="dateech">
+							<option value="">la date d'echeance</option>
+						</select>
+
+					</div>
+
+				</div>
+
+				<div class="envoyer">
+					<button type="submit">
+						Voir
+					</button>
+				</div>
+
+
+			</form>
+
+
+		</div>
+
+	</div>
+
+{% endblock %}

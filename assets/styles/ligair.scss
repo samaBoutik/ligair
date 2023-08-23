@@ -1,0 +1,122 @@
+@import "custom";
+
+h1 {
+    text-align: center;
+}
+
+.ghover {
+    fill: #FF6347 !important;
+    stroke: #eee8aae1 !important;
+    stroke-width: 2px !important;
+
+}
+
+.gclick {
+    fill: #c44c36 !important;
+    stroke: #bab473e1 !important;
+    stroke-width: 3px !important;
+
+}
+
+.map {
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+    height: 100vh;
+    display: flex;
+    gap: 5px;
+
+    &__image {
+        width: 80%;
+        float: left;
+
+
+
+        g {
+            cursor: pointer;
+            fill: rgb(104, 50, 29);
+            stroke: rgba(18, 12, 12, 0.65);
+            stroke-width: 1px;
+            transition: fill 0.3s;
+
+            &:hover {
+                fill: rgb(2, 189, 48);
+            }
+
+
+        }
+    }
+
+    &__description {
+        border: 1px solid rgba(193, 190, 188, 0.764);
+        border-radius: 10px;
+        padding: 10px;
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1%;
+
+        h2 {
+            text-align: center;
+            color: #333;
+            font-size: clamp(12px, 2rem, 16px);
+        }
+
+        #form {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            gap: 30px;
+
+            .lesdates {
+                max-width: 100%;
+                margin: auto;
+                display: flex;
+                justify-content: space-between;
+
+            }
+
+            button {
+                cursor: pointer;
+                border: none;
+                background-color: chocolate;
+                color: aquamarine;
+                border-radius: 2px;
+                padding: 5px 10px;
+                font-weight: bolder;
+            }
+        }
+    }
+}
+
+#variable {
+    width: 100%;
+
+    .listeatmo {
+        width: 100%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 2px;
+
+        .ligneindice {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            outline: 1px solid #7f7575;
+            padding: 2px;
+            margin: 2px;
+
+            h4 {
+                font-weight: lighter;
+            }
+
+            .image {
+                width: 50px;
+                height: 20px;
+            }
+        }
+    }
+}

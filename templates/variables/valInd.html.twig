@@ -1,0 +1,12 @@
+<h3 class="text-center">
+	Description Indice ATMO
+</h3>
+<div class="listeatmo">
+	{% for valind in indice %}
+		{% set valu = valind.id - 1 %}
+		<div class="ligneindice">
+			<h4 style="color:{{couleurs[valu]}}">{{valind.qualificatifs|upper}}</h4>
+			<div class="image" style="background-color:{{couleurs[valu]}}"></div>
+		</div>
+	{% endfor %}
+</div>
